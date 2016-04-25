@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :find_project, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @projects = Project.all.order("created_at DESC")
   end
@@ -24,10 +24,10 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-  	params.require(:project).permit(:title, :description, :link)
+  	params.require(:project).permit(:title, :description, :link, :slug)
   end
 
   def find_project
-  	@project = Project.find(params[:id])
+  	@project = Project.friendly.find(params[:id])
   end
 end
