@@ -15,6 +15,7 @@
 	  <%= link_to "Articles", posts_path %>
 	  <%= link_to "Projects", projects_path %>
     <%= link_to "Contact", new_contact_path %>
+    <a href="http://students.washington.edu/aayush19/resume.pdf" target="_blank">Resume</a>
     <% if user_signed_in? %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% end %>
