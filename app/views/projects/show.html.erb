@@ -4,19 +4,23 @@
 		<h1><%= @project.title %></h1>
 		<hr>
 	</header>
+
 	<div id="content">
-		<%= markdown(@project.description) %>
+		<%= markdown @project.description %>
+
 		<div class="button-wrapper">
 			<a href="<%= @project.link %>" class="project-button" target="_blank">Visit <%= @project.title %></a>
 		</div>
 	</div>
 
-	<%- if user_signed_in? %>
+	<% if user_signed_in? %>
 		<div id="admin-links">
-			<%= link_to "Edit Project", edit_project_path(@project) %>
-			<%= link_to "Delete Project", post_project(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+			<%= link_to "Edit", edit_project_path(@project) %>
+			<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
 		</div>
-	<% end -%>	
+	<% end %>
 
 	<hr>
 </div>
+
+
