@@ -13,11 +13,11 @@ class PostsController < ApplicationController
   def create
 	@post = Post.new(post_params)
 
-	if @post.save
-	  redirect_to @post, :notice => "YOYYOYOYOYO! Waddap Aayush. You just created a post."
-	else 
-	  render 'new', :notice => "Aww naw dawg.. I was unable to save your post"
-	end
+  	if @post.save
+  	  redirect_to @post, :notice => "YOYYOYOYOYO! Waddap Aayush. You just created a post."
+  	else 
+  	  render 'new', :notice => "Aww naw dawg.. I was unable to save your post"
+  	end
   end
 
   def show 
@@ -27,11 +27,11 @@ class PostsController < ApplicationController
   end
 
   def update
-	if @post.update(post_params)
-		redirect_to @post, :notice => "YOLO! Your post was updated"
-	else
-		render 'edit'
-	end
+  	if @post.update(post_params)
+  		redirect_to @post, :notice => "YOLO! Your post was updated"
+  	else
+  		render 'edit'
+  	end
   end
 
   def destroy
