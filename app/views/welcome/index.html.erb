@@ -1,26 +1,13 @@
 <div class="wrapper wrapper-padding clearfix">
 	<div class="col-1 about homepage-content">
-		<h2>About</h2>
+		<img src="http://students.washington.edu/aayush19/profile.jpg" alt="profile">
+	</div>
+	<div class="col-1 about homepage-content">
+		<h2>About Me</h2>
 		<hr>
 		<p>I am a sophomore studying at the University of Washington, Seattle.</p>
 		<p>My intended major is Informatics. By day, I work as the Software Application Manager at the <a href="http://www.washington.edu/dreamproject/" target="_blanks">University of Washington Dream Project</a> and attend my classes, by night I play badminton or soccer, and hit the gym.</p>
 		<p>Born and raised in New Delhi-India, I moved to Seattle in the Fall 2014.</p>
 		<p>You can find me sharing interesting articles on Facebook, swooshing some pictures about my adventures on Instagram, and sharing some code on Github.</p>
-	</div>
-	<div class="col-2 homepage-content">
-		<h2>Stuff I've Written</h2>
-		<hr>
-		<% @posts.each do |post| %>
-		  <h3><%= link_to post.title, post %></h3>
-		  <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-		<% end -%>
-	</div>
-	<div class="col-3 homepage-content">
-		<h2>Stuff I've Built</h2>
-		<hr>
-		<% @projects.each do |project| %>
-		  <h3><%= link_to project.title, project %></h3>
-		  <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
-		<% end -%>
 	</div>
 </div>
