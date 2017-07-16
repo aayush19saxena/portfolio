@@ -15,7 +15,7 @@
 	  <%= link_to "Blog", posts_path %>
 	  <%= link_to "Projects", projects_path %>
     <%= link_to "Contact", new_contact_path %>
-    <a href="http://students.washington.edu/aayush19/resume.pdf" target="_blank">Resume</a>
+    <a href="http://students.washington.edu/aayush19/Resume/resume.pdf" target="_blank">Resume</a>
     <% if user_signed_in? %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% end %>
@@ -31,12 +31,10 @@
   <%= yield %>
 
   <footer id="main-footer">
-    <p class="copyright">&copy; 2016 Aayush Saxena</p>
+    <p class="copyright">&copy; 2014-2017 Aayush Saxena</p>
     <nav>
-      <a href="https://www.instagram.com/aayushssaxena/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
       <a href="https://github.com/aayush19saxena" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
       <a href="https://www.linkedin.com/in/aayush19saxena" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-      <a href="https://twitter.com/saxenaayush19" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
     </nav>
   </footer>
 
